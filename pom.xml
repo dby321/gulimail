@@ -10,7 +10,12 @@
 <packaging>pom</packaging>
     <modules>
 
-</modules>
+    <module>gulimail-order</module>
+    <module>gulimail-coupon</module>
+    <module>gulimail-product</module>
+    <module>gulimail-ware</module>
+    <module>gulimail-member</module>
+    </modules>
 
 
 </project>
