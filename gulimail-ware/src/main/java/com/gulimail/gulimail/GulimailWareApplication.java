@@ -7,7 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GulimailWareApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run ( GulimailWareApplication.class, args );
+        SpringApplication.run (
+                GulimailWareApplication.class, args );
     }
 
 }

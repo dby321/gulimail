@@ -7,14 +7,17 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>gulimail</name>
     <description>聚合服务</description>
-<packaging>pom</packaging>
+    <packaging>pom</packaging>
     <modules>
 
-    <module>gulimail-order</module>
-    <module>gulimail-coupon</module>
-    <module>gulimail-product</module>
-    <module>gulimail-ware</module>
-    <module>gulimail-member</module>
+        <module>gulimail-order</module>
+        <module>gulimail-coupon</module>
+        <module>gulimail-product</module>
+        <module>gulimail-ware</module>
+        <module>gulimail-member</module>
+        <module>renren-fast</module>
+        <module>renren-generator</module>
+        <module>gulimail_common</module>
     </modules>
 
 
