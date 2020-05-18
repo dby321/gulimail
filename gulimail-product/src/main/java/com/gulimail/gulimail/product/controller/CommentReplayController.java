@@ -3,7 +3,6 @@ package com.gulimail.gulimail.product.controller;
 import java.util.Arrays;
 import java.util.Map;
 
-import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -23,7 +22,7 @@ import com.gulimail.common.utils.R;
  *
  * @author binyu
  * @email 1017834057@qq.com
- * @date 2020-05-13 12:06:06
+ * @date 2020-05-13 13:41:20
  */
 @RestController
 @RequestMapping("product/commentreplay")
@@ -35,7 +34,7 @@ public class CommentReplayController {
      * 列表
      */
     @RequestMapping("/list")
-    @RequiresPermissions("product:commentreplay:list")
+    //@RequiresPermissions("product:commentreplay:list")
     public R list(@RequestParam Map<String, Object> params){
         PageUtils page = commentReplayService.queryPage(params);
 
@@ -47,9 +46,9 @@ public class CommentReplayController {
      * 信息
      */
     @RequestMapping("/info/{id}")
-    @RequiresPermissions("product:commentreplay:info")
+    //@RequiresPermissions("product:commentreplay:info")
     public R info(@PathVariable("id") Long id){
-		CommentReplayEntity commentReplay = commentReplayService.getById(id);
+            CommentReplayEntity commentReplay = commentReplayService.getById(id);
 
         return R.ok().put("commentReplay", commentReplay);
     }
@@ -58,9 +57,9 @@ public class CommentReplayController {
      * 保存
      */
     @RequestMapping("/save")
-    @RequiresPermissions("product:commentreplay:save")
+    //@RequiresPermissions("product:commentreplay:save")
     public R save(@RequestBody CommentReplayEntity commentReplay){
-		commentReplayService.save(commentReplay);
+            commentReplayService.save(commentReplay);
 
         return R.ok();
     }
@@ -69,9 +68,9 @@ public class CommentReplayController {
      * 修改
      */
     @RequestMapping("/update")
-    @RequiresPermissions("product:commentreplay:update")
+    //@RequiresPermissions("product:commentreplay:update")
     public R update(@RequestBody CommentReplayEntity commentReplay){
-		commentReplayService.updateById(commentReplay);
+            commentReplayService.updateById(commentReplay);
 
         return R.ok();
     }
@@ -80,9 +79,9 @@ public class CommentReplayController {
      * 删除
      */
     @RequestMapping("/delete")
-    @RequiresPermissions("product:commentreplay:delete")
+    //@RequiresPermissions("product:commentreplay:delete")
     public R delete(@RequestBody Long[] ids){
-		commentReplayService.removeByIds(Arrays.asList(ids));
+            commentReplayService.removeByIds(Arrays.asList(ids));
 
         return R.ok();
     }
